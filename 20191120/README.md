@@ -8,9 +8,9 @@
 * Result
     * Success
 
-### 카펫
+### 위장
 * [Programmers](https://programmers.co.kr/learn/courses/30/lessons/42578)
-* Brute-force Search
+* Hashing
 * Result
     * Fail..
     * I didn't think about another case. So Next Study, I will fix it 
@@ -26,7 +26,7 @@ vector <vector<string>> c = { {"yellow_hat", "headgear"} , {"blue_sunglasses", "
 ---
 ## Assignment
 
-### 카펫
+### 위장
 * [Programmers](https://programmers.co.kr/learn/courses/30/lessons/42578)
 * Brute-force Search
 * Find calculating way for all case ! 
