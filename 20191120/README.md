@@ -23,6 +23,7 @@
 vector <vector<string>> c = { {"yellow_hat", "headgear"} , {"blue_sunglasses", "eyewear"}, {"green_turban", "headgear"} }
 ```
 1차원도 동일하다.
+
 ---
 ## Assignment
 
