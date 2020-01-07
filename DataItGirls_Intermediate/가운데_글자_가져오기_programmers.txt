@@ -1,0 +1,7 @@
+def solution(s):
+    idx = int(len(s)/2)
+    isEven = int(len(s)%2)
+    if isEven == 1:
+        return s[idx]
+    else:
+        return s[idx-1:idx+1]

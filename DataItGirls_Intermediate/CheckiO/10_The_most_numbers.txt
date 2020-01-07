@@ -1,0 +1,12 @@
+def checkio(*args):
+    max = -1000
+    min = 1000
+    for arg in args:
+        if arg < min:
+            min = arg
+        if arg > max:
+            max = arg
+    
+    if max == -1000 or min == 1000:
+        return 0
+    return max - min

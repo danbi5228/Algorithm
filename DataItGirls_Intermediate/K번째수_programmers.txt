@@ -1,0 +1,15 @@
+def solution(array, commands):
+    answer = []
+    for i in range(len(commands)):
+        tmp_array = []
+        start_idx = commands[i][0] - 1
+        end_idx = commands[i][1] - 1
+        target_idx = commands[i][2] - 1
+        
+        while start_idx <= end_idx:
+            print(array[start_idx])
+            tmp_array.append(array[start_idx])
+            start_idx += 1
+        tmp_array.sort()
+        answer.append(tmp_array[target_idx])
+    return answer

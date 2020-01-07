@@ -1,0 +1,14 @@
+def checkio(data: list) -> list:
+    dic ={}
+    
+    for elem in data:
+        if elem in dic:
+            dic[elem] += 1
+        else:
+            dic[elem] = 1
+
+    for k, v in dic.items():
+        if v == 1:
+            data.remove(k)
+            
+    return data

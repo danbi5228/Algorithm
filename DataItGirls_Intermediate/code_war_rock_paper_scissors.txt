@@ -1,0 +1,16 @@
+def rps(p1, p2):
+    #your code here
+    if(p1 == p2):
+        return "Draw!"
+    
+    winp1 = {
+        'scissors': 'paper',
+        'paper': 'rock',
+        'rock': 'scissors'
+    }
+    
+    for key, val in winp1.items():
+        if key == p1 and val == p2:
+            return 'Player 1 won!'
+    
+    return 'Player 2 won!'

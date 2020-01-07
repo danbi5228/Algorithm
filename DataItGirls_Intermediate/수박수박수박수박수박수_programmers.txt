@@ -1,0 +1,9 @@
+def solution(n):
+    answer = ''
+    while(n>0):
+        n -= 1
+        answer += '수'
+        if(n>0):
+            answer += '박'
+        n -=1
+    return answer

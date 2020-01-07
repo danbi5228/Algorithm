@@ -1,0 +1,13 @@
+def verify_anagrams(first_word, second_word):
+    first_word = first_word.lower().replace(" ", "")
+    second_word = second_word.lower().replace(" ", "")
+    sorted_f = ''.join(sorted(first_word))
+    sorted_s = ''.join(sorted(second_word))
+    
+    if len(sorted_f) != len(sorted_s):
+        return False
+
+    for a, b in zip(sorted_f, sorted_s):
+       if a!=b:
+           return False
+    return True

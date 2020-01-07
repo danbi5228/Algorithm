@@ -1,0 +1,18 @@
+def first_word(text: str) -> str:
+    """
+        returns the first word in a given text.
+    """
+    # your code here
+    
+    fw = ''
+    sgnl = 0
+
+    for i in text:
+        if (i == ' ' or i == ',' or i == '.') and sgnl == 0:
+            continue
+        if i == ' ' or i == ',' or i == '.':
+            break
+        else:
+            fw += i
+            sgnl = 1
+    return fw

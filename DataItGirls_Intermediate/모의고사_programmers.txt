@@ -1,0 +1,71 @@
+def solution(answers):
+    answer = []
+    count_answer = []
+    # 1번 수포자
+    p1 = []
+    answer1 = 0;
+    
+    while(len(p1) <= 10000):
+        answer1 += 1
+        p1.append(answer1)
+        answer1 %= 5
+    
+    # 2번 수포자
+    p2 = []
+    answer_1 = 2
+    answer_2 = 0
+    idx = 0
+    
+    while(len(p2) <= 100000):
+        if(idx%2 == 0):
+            p2.append(answer_1)
+        else:
+            answer_2 += 1
+            if(answer_2 == 2):
+                answer_2 += 1
+            p2.append(answer_2)
+            answer_2 %= 5
+        idx += 1
+        
+        
+    # 3번 수포자
+    p3 = []
+    p3_pattern = [3, 1, 2, 4, 5]
+    p3_idx = 0
+    p3_pattern_idx = 0
+    
+    p3.append(3)
+    while(len(p3) <= 100000):
+        if(p3_idx % 2 != 0):
+            p3.append(p3_pattern[p3_pattern_idx])
+        else:
+            p3.append(p3_pattern[p3_pattern_idx])
+            p3_pattern_idx += 1
+            p3_pattern_idx %= 5
+        p3_idx += 1
+    
+    
+    p1_cnt = 0
+    p2_cnt = 0
+    p3_cnt = 0
+    for p1_answers_idx in range(len(answers)):
+        if answers[p1_answers_idx] == p1[p1_answers_idx]:
+            p1_cnt += 1
+    
+    for p2_answers_idx in range(len(answers)):
+        if answers[p2_answers_idx] == p2[p2_answers_idx]:
+            p2_cnt += 1
+    
+    for p3_answers_idx in range(len(answers)):
+        if answers[p3_answers_idx] == p3[p3_answers_idx]:
+            p3_cnt += 1
+    
+    count_answer.append(p1_cnt)
+    count_answer.append(p2_cnt)
+    count_answer.append(p3_cnt)
+    
+    for count_answer_idx in range(len(count_answer)):
+        if max(count_answer) == count_answer[count_answer_idx]:
+            answer.append(count_answer_idx+1)
+    
+    return answer

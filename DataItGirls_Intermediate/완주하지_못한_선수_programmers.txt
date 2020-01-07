@@ -1,0 +1,54 @@
+성공 1
+
+def solution(participant, completion):
+   answer = ''
+   
+   dic = { }
+   
+   for key in participant:
+       dic[key] = 0
+   for key in participant:
+       dic[key] += 1
+       
+   for com_key in completion:
+       if dic[com_key] > 0:
+           dic[com_key] -= 1
+   
+   for ans_key, ans_val in dic.items():
+       if ans_val == 1:
+           answer = ans_key
+   return answer
+
+
+
+
+실패 1
+
+    while len(participant) > 1: # while 없이 하려니까 자꾸 2개가 나옴 ㅜㅜ
+        for participant_name in participant:
+            if participant_name in completion:
+                participant.remove(participant_name)
+                completion.remove(participant_name)
+   
+실패 2
+
+    while len(answer) <= 1:
+        for participant_name in participant:
+            if participant_name not in completion:
+                answer = participant_name
+                return answer
+            else: 
+                participant.remove(participant_name)
+                completion.remove(participant_name)
+
+
+실패 3
+
+
+    for participant_name in participant:
+        if completion.count(participant_name) != participant.count(participant_name):
+            answer = participant_name
+            return answer
+
+
+

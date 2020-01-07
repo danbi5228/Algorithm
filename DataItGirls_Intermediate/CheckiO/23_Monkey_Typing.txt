@@ -1,0 +1,9 @@
+def count_words(text: str, words: set) -> int:
+    cnt = 0
+    text = text.lower()
+    words = list(words)
+    
+    for i in words:
+        if i in text:
+            cnt += 1
+    return cnt

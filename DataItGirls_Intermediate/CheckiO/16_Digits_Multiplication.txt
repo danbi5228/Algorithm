@@ -1,0 +1,8 @@
+def checkio(number: int) -> int:
+    result = 1;
+    str_number = str(number)
+    for num in str_number:
+        if num == '0':
+            continue
+        result *= int(num)
+    return result

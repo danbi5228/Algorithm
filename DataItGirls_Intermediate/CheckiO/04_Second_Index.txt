@@ -1,0 +1,19 @@
+def second_index(text: str, symbol: str) -> [int, None]:
+    """
+        returns the second index of a symbol in a given text
+    """
+    # your code here
+    
+    cnt = 0
+    idx = 0
+    rt_idx = 0
+    
+    for i in text:
+        if i == symbol and cnt < 2:
+            rt_idx = idx
+            cnt += 1
+        idx += 1
+    
+    if rt_idx == 0 or cnt == 1:
+        return None
+    return rt_idx

@@ -1,0 +1,3 @@
+def all_the_same(elements: List[Any]) -> bool:
+    # your code here
+    return True if len(elements) == 0 or len(elements) == elements.count(elements[0]) else False

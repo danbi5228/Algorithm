@@ -1,0 +1,15 @@
+def checkio(numbers_array: tuple) -> list:
+    arr = list(numbers_array)
+    tmp_arr = list(numbers_array)
+    
+    idx = 0
+    for elem in tmp_arr:
+        tmp_arr[idx] = abs(elem)
+        idx += 1
+    
+    tmp_arr.sort()
+    
+    for elem in arr:            
+        idx_elem = tmp_arr.index(abs(elem))
+        tmp_arr[idx_elem] = elem
+    return tmp_arr

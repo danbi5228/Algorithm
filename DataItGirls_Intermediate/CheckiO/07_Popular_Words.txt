@@ -1,0 +1,14 @@
+def popular_words(text: str, words: list) -> dict:
+    # your code here
+    dic_t = {}
+    for val in words:
+        dic_t[val] = 0
+        
+    lower_text = text.lower()
+    lower_text = lower_text.replace('\n',' ')
+    lower_text = lower_text.split(' ')
+    
+    for txt in lower_text:
+        if txt in dic_t.keys():
+            dic_t[txt] += 1
+    return dic_t

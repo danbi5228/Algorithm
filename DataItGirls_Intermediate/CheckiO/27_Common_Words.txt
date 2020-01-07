@@ -1,0 +1,27 @@
+def checkio(first, second):
+    word_arr = first.strip().split(',') + second.strip().split(',')
+    table = {}
+    for word in word_arr:
+        if word in table.keys():
+            table[word] += 1
+        else :
+            table[word] = 1
+    sorted_t = sorted(table.items(), key= lambda kv: kv[1], reverse = True)
+    max_v = sorted_t[0][1]
+    if max_v == 1:
+        return ""
+    else:
+        result = []
+        for (word, val) in sorted_t:
+            if val == max_v:
+                result.append(word)
+            else:
+                break
+        result = ','.join(result)
+        return result
+
+#These "asserts" using only for self-checking and not necessary for auto-testing
+if __name__ == '__main__':
+    assert checkio("hello,world", "hello,earth") == "hello", "Hello"
+    assert checkio("one,two,three", "four,five,six") == "", "Too different"
+    assert checkio("one,two,three", "four,five,one,two,six,three") == "one,three,two", "1 2 3"

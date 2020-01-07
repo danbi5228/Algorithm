@@ -1,0 +1,30 @@
+def between_markers(text: str, begin: str, end: str) -> str:
+    """
+        returns substring between two given markers
+    """
+    # your code here
+    
+    
+    find_begin = text.find(begin)
+    find_end = text.find(end)
+    
+    print(find_begin, find_end)
+    # both conditions
+    if find_begin == -1 and find_end == -1:
+        return text
+    if find_begin > find_end and find_begin != -1 and find_end != -1:
+        return ''
+    # one condition
+
+    if find_begin == -1:
+        print(text[0:find_end])
+        return text[0:find_end]
+        
+    find_begin += len(begin)
+    
+    if find_end == -1:
+        print(text[find_begin:len(text)])
+        return text[find_begin:len(text)]
+    
+    print(text[find_begin:find_end])
+    return text[find_begin:find_end]

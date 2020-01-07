@@ -1,0 +1,12 @@
+def easy_unpack(elements: tuple) -> tuple:
+    """
+        returns a tuple with 3 elements - first, third and second to the last
+    """
+    # your code here
+    
+    elements = list(elements)
+    result = []
+    result.append(elements[0])
+    result.append(elements[2])
+    result.append(elements[-2])
+    return tuple(result)

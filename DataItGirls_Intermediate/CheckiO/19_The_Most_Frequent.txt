@@ -1,0 +1,15 @@
+def most_frequent(data: list) -> str:
+    """
+        determines the most frequently occurring string in the sequence.
+    """
+    # your code here
+    
+    data_dic = {}
+    for elem in data:
+        if elem in data_dic:
+            data_dic[elem] += 1
+        else:
+            data_dic[elem] = 1
+    
+    data_dic = sorted(data_dic.items(), key = (lambda x: x[1]), reverse = True)
+    return next(iter(data_dic))[0]

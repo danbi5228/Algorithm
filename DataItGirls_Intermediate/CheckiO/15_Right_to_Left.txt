@@ -1,0 +1,7 @@
+def left_join(phrases):
+    """
+        Join strings and replace "right" to "left"
+    """
+    message = ",".join(phrases)
+    message = message.replace("right", "left")
+    return message

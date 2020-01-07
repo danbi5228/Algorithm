@@ -1,0 +1,10 @@
+def best_stock(data):
+    # your code here
+    
+    max_val = 0
+    max_key = ''
+    for key, val in data.items():
+        if val > max_val:
+            max_val = val
+            max_key = key
+    return max_key

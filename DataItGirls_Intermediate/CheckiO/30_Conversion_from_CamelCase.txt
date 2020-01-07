@@ -1,0 +1,9 @@
+def from_camel_case(name):
+    plus_num = 0
+    for (idx, name_char) in zip(range(len(name)), name):
+        if idx == 0:
+            continue
+        if name_char.isupper():
+            name = name[:idx+plus_num]+'_'+name[idx+plus_num:]
+            plus_num += 1
+    return name.lower()
